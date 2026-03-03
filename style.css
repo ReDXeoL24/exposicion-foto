@@ -1,9 +1,3 @@
-/*
- * Hoja de estilos para el portafolio fotográfico de Nicoll Bello
- * Este archivo contiene variables CSS, estilos generales y componentes
- * específicos como pestañas, rejilla de fotos, slider y lightbox.
- */
-
 /* Variables de color y diseño */
 :root {
   --fondo: #ffffff;
@@ -21,22 +15,11 @@
 }
 
 /* Estilos globales */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  /* Fondo animado en degradé para añadir dinamismo y color */
-  background: linear-gradient(-45deg,
-    #e27a87,
-    #f5c676,
-    #81c6e8,
-    #a5d6a7,
-    #f5c676,
-    #e27a87);
+  background: linear-gradient(-45deg, #e27a87, #f5c676, #81c6e8, #a5d6a7, #f5c676, #e27a87);
   background-size: 600% 600%;
   animation: gradientBG 30s ease infinite;
   color: var(--texto);
@@ -47,23 +30,15 @@ body {
   padding: 32px 16px;
 }
 
-/* Animación para el fondo degradado */
 @keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .marco {
   width: 100%;
   max-width: 1100px;
-  /* Fondo ligeramente translúcido para dejar ver el degradado animado */
   background: rgba(255, 255, 255, 0.92);
   border-radius: 32px;
   box-shadow: var(--shadow-suave);
@@ -71,9 +46,7 @@ body {
   overflow: hidden;
 }
 
-.contenido {
-  padding: 24px 22px 26px;
-}
+.contenido { padding: 24px 22px 26px; }
 
 header {
   display: flex;
@@ -83,21 +56,9 @@ header {
   margin-bottom: 22px;
 }
 
-.titulo {
-  flex: 1 1 220px;
-}
-
-.titulo h1 {
-  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
-
-.titulo p {
-  font-size: 0.9rem;
-  color: var(--texto-suave);
-}
+.titulo { flex: 1 1 220px; }
+.titulo h1 { font-size: clamp(1.6rem, 2.4vw, 2.2rem); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 6px; }
+.titulo p { font-size: 0.9rem; color: var(--texto-suave); }
 
 .etiqueta {
   padding: 8px 14px;
@@ -114,11 +75,7 @@ header {
 }
 
 .etiqueta span.dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--acento);
-  box-shadow: 0 0 6px rgba(227, 179, 64, 0.5);
+  width: 7px; height: 7px; border-radius: 50%; background: var(--acento); box-shadow: 0 0 6px rgba(227, 179, 64, 0.5);
 }
 
 /* Pestañas */
@@ -130,384 +87,227 @@ header {
   background: var(--fondo-card-alt);
   border: 1px solid var(--borde-suave);
   margin-bottom: 18px;
+  flex-wrap: wrap;
 }
 
 .tab-button {
-  border: none;
-  background: transparent;
-  color: var(--texto-suave);
-  padding: 8px 16px;
-  border-radius: var(--radius-pill);
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: var(--trans);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  border: none; background: transparent; color: var(--texto-suave); padding: 8px 16px;
+  border-radius: var(--radius-pill); font-size: 0.9rem; cursor: pointer; transition: var(--trans);
+  display: inline-flex; align-items: center; gap: 6px;
 }
 
-.tab-button:hover {
-  background: rgba(227, 179, 64, 0.12);
-  color: var(--texto);
-}
+.tab-button:hover { background: rgba(227, 179, 64, 0.12); color: var(--texto); }
+.tab-button.active { background: var(--acento-suave); color: var(--texto); box-shadow: 0 0 0 1px var(--acento-suave), 0 4px 12px rgba(0, 0, 0, 0.08); }
 
-.tab-button.active {
-  background: var(--acento-suave);
-  color: var(--texto);
-  box-shadow: 0 0 0 1px var(--acento-suave), 0 4px 12px rgba(0, 0, 0, 0.08);
-}
+main { margin-top: 4px; }
 
-main {
-  margin-top: 4px;
-}
+.tab-content { display: none; animation: fadeIn 0.35s ease-out; }
+.tab-content.active { display: block; }
 
-.tab-content {
-  display: none;
-  animation: fadeIn 0.35s ease-out;
-}
-
-.tab-content.active {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
 /* Sección autor */
 .autor {
-  background: var(--fondo-card-alt);
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--borde-suave);
-  padding: 18px 18px 16px;
-  margin-bottom: 16px;
-  position: relative;
-  overflow: hidden;
+  background: var(--fondo-card-alt); border-radius: var(--radius-xl); border: 1px solid var(--borde-suave);
+  padding: 18px 18px 16px; margin-bottom: 16px; position: relative; overflow: hidden;
 }
-
-.autor::after {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 1px solid var(--acento-suave);
-  top: -40px;
-  right: -40px;
-  opacity: 0.4;
-}
-
-.autor h2 {
-  font-size: 1.05rem;
-  margin-bottom: 6px;
-}
-
-.autor p {
-  font-size: 0.9rem;
-  color: var(--texto-suave);
-  max-width: 600px;
-  line-height: 1.5;
-}
-
-.autor strong {
-  color: var(--acento);
-}
-
-/* Imagen de portada dentro de la sección del autor */
-.autor img.autor-foto {
-  width: 100%;
-  max-width: 280px;
-  display: block;
-  margin-bottom: 12px;
-  border-radius: var(--radius-xl);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  object-fit: cover;
-}
+.autor h2 { font-size: 1.05rem; margin-bottom: 6px; }
+.autor p { font-size: 0.9rem; color: var(--texto-suave); max-width: 600px; line-height: 1.5; }
+.autor strong { color: var(--acento); }
+.autor img.autor-foto { width: 100%; max-width: 280px; display: block; margin-bottom: 12px; border-radius: var(--radius-xl); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); object-fit: cover; }
 
 /* Rejilla de fotos */
-.grid-fotos {
+.grid-fotos { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+.foto { position: relative; border-radius: 18px; overflow: hidden; border: 1px solid var(--borde-suave); background: var(--fondo-card-alt); aspect-ratio: 3 / 4; transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; cursor: pointer; }
+.foto img { width: 100%; height: 100%; object-fit: cover; display: block; filter: saturate(1.08); transition: transform 0.4s ease, filter 0.4s ease; }
+.foto span.caption { position: absolute; left: 8px; bottom: 8px; padding: 4px 9px; border-radius: 999px; font-size: 0.75rem; background: rgba(0, 0, 0, 0.55); color: #f9f9f9; backdrop-filter: blur(10px); }
+.foto:hover { transform: translateY(-4px); border-color: rgba(227, 179, 64, 0.4); box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1); }
+.foto:hover img { transform: scale(1.03); filter: contrast(1.05) saturate(1.1); }
+
+/* Slider del proyecto final */
+#tab-proyecto h2 { font-size: 1.05rem; margin-bottom: 10px; }
+.slider { margin-top: 4px; background: var(--fondo-card-alt); border-radius: var(--radius-xl); border: 1px solid var(--borde-suave); padding: 14px 14px 18px; display: grid; gap: 10px; position: relative; overflow: hidden; }
+.slider-header { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 0.8rem; color: var(--texto-suave); padding: 0 4px; }
+.slider-header span.tag { padding: 4px 10px; border-radius: 999px; background: var(--fondo); border: 1px solid var(--borde-suave); }
+.slider-window { position: relative; border-radius: 18px; overflow: hidden; aspect-ratio: 3 / 4; background: var(--fondo-card); border: 1px solid var(--borde-suave); }
+.slider-window img { width: 100%; height: 100%; object-fit: contain; display: block; transition: opacity 0.3s ease; cursor: pointer; }
+.slider-btn { position: absolute; top: 50%; transform: translateY(-50%); border: none; width: 34px; height: 34px; border-radius: 999px; background: rgba(0, 0, 0, 0.45); color: #ffffff; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: var(--trans); border: 1px solid rgba(255, 255, 255, 0.2); font-size: 1.2rem; }
+.slider-btn:hover { background: rgba(227, 179, 64, 0.25); transform: translateY(-50%) scale(1.08); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
+.slider-btn.prev { left: 10px; } .slider-btn.next { right: 10px; }
+.slider-indicators { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; padding: 0 4px; }
+.slider-indicator { width: 8px; height: 8px; border-radius: 999px; border: none; background: rgba(0, 0, 0, 0.12); cursor: pointer; transition: var(--trans); }
+.slider-indicator.active { width: 24px; background: var(--acento); box-shadow: 0 0 8px rgba(227, 179, 64, 0.7); }
+.slider-caption { font-size: 0.85rem; color: var(--texto-suave); text-align: center; margin-top: 4px; }
+
+/* La joven de la perla */
+.sinopsis-container { display: flex; gap: 20px; background: var(--fondo-card-alt); border-radius: var(--radius-xl); padding: 20px; margin-bottom: 24px; align-items: center; border: 1px solid var(--borde-suave); }
+.portada-pelicula { width: 120px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); object-fit: cover; }
+.sinopsis-container h2 { margin-bottom: 8px; font-size: 1.2rem; }
+.sinopsis-container p { font-size: 0.95rem; color: var(--texto-suave); line-height: 1.5; }
+.comparativa-grid { display: flex; flex-direction: column; gap: 20px; }
+.comparativa-item { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; background: var(--fondo-card-alt); padding: 16px; border-radius: var(--radius-xl); border: 1px solid var(--borde-suave); }
+.foto-wrap { position: relative; border-radius: 12px; overflow: hidden; background: var(--fondo-card); border: 1px solid var(--borde-suave); aspect-ratio: 4 / 3; }
+.foto-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; cursor: pointer; transition: transform 0.4s ease; }
+.foto-wrap:hover img { transform: scale(1.03); }
+.foto-wrap span.caption { position: absolute; left: 10px; bottom: 10px; padding: 4px 10px; border-radius: 999px; font-size: 0.75rem; background: rgba(0, 0, 0, 0.65); color: #fff; backdrop-filter: blur(5px); pointer-events: none; }
+
+/* Pestaña: Principios de la composición */
+.comp-header { margin-bottom: 20px; }
+.comp-header h2 { font-size: 1.2rem; margin-bottom: 6px; }
+.comp-header p { font-size: 0.95rem; color: var(--texto-suave); }
+
+.comp-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
 }
 
-.foto {
-  position: relative;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid var(--borde-suave);
+.comp-card {
   background: var(--fondo-card-alt);
-  aspect-ratio: 3 / 4;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-  cursor: pointer;
+  border: 1px solid var(--borde-suave);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.foto img {
+.comp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.comp-img-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.comp-img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: saturate(1.08);
-  transition: transform 0.4s ease, filter 0.4s ease, opacity 0.25s ease;
-}
-
-.foto span.caption {
-  position: absolute;
-  left: 8px;
-  bottom: 8px;
-  padding: 4px 9px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  background: rgba(0, 0, 0, 0.55);
-  color: #f9f9f9;
-  backdrop-filter: blur(10px);
-}
-
-.foto:hover {
-  transform: translateY(-4px);
-  border-color: rgba(227, 179, 64, 0.4);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
-}
-
-.foto:hover img {
-  transform: scale(1.03);
-  filter: contrast(1.05) saturate(1.1);
-}
-
-.nota {
-  font-size: 0.75rem;
-  color: var(--texto-suave);
-  opacity: 0.8;
-  margin-top: 8px;
-}
-
-/* Slider del proyecto final */
-#tab-proyecto h2 {
-  font-size: 1.05rem;
-  margin-bottom: 10px;
-}
-
-.slider {
-  margin-top: 4px;
-  background: var(--fondo-card-alt);
-  border-radius: var(--radius-xl);
-  border: 1px solid var(--borde-suave);
-  padding: 14px 14px 18px;
-  display: grid;
-  grid-template-columns: auto;
-  gap: 10px;
-  position: relative;
-  overflow: hidden;
-}
-
-.slider-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.8rem;
-  color: var(--texto-suave);
-  padding: 0 4px;
-}
-
-.slider-header span.tag {
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: var(--fondo);
-  border: 1px solid var(--borde-suave);
-}
-
-.slider-window {
-  position: relative;
-  border-radius: 18px;
-  overflow: hidden;
-  /* Proporción vertical para mostrar fotos en formato retrato sin recortes */
-  aspect-ratio: 3 / 4;
-  background: var(--fondo-card);
-  border: 1px solid var(--borde-suave);
-}
-
-.slider-window img {
-  width: 100%;
-  height: 100%;
-  /* Contiene la imagen para evitar recortes de fotos verticales */
-  object-fit: contain;
-  display: block;
-  transition: opacity 0.3s ease;
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: none;
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.45);
-  color: #ffffff;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--trans);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 1.2rem;
+  transition: transform 0.5s ease;
 }
 
-.slider-btn:hover {
-  background: rgba(227, 179, 64, 0.25);
-  transform: translateY(-50%) scale(1.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.slider-btn.prev {
-  left: 10px;
-}
-
-.slider-btn.next {
-  right: 10px;
-}
-
-.slider-indicators {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  justify-content: center;
-  padding: 0 4px;
-}
-
-.slider-indicator {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  border: none;
-  background: rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-  transition: var(--trans);
-}
-
-.slider-indicator.active {
-  width: 24px;
-  background: var(--acento);
-  box-shadow: 0 0 8px rgba(227, 179, 64, 0.7);
-}
-
-.slider-caption {
-  font-size: 0.85rem;
-  color: var(--texto-suave);
-  text-align: center;
-  margin-top: 4px;
-}
-
-footer {
-  margin-top: 18px;
-  font-size: 0.75rem;
-  color: var(--texto-suave);
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-footer span.marca {
-  opacity: 0.8;
-}
-
-footer span.detalle {
-  opacity: 0.6;
-}
-
-/* Lightbox para ampliar fotos */
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.75);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  transition: opacity 0.3s ease;
-}
-
-.lightbox.hidden {
-  display: none;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: var(--radius-xl);
-  border: 4px solid var(--fondo-card);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-}
-
-.lightbox-prev,
-.lightbox-next,
-.lightbox-close {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.5);
-  color: #ffffff;
-  border: none;
-  border-radius: 999px;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: var(--trans);
-  font-size: 1.4rem;
-  z-index: 1001;
-}
-
-.lightbox-prev:hover,
-.lightbox-next:hover,
-.lightbox-close:hover {
-  background: rgba(227, 179, 64, 0.45);
+.comp-card:hover .comp-img-wrap img {
   transform: scale(1.05);
 }
 
-.lightbox-close {
-  top: 14px;
-  right: 14px;
+.comp-text-content {
+  padding: 16px;
 }
 
-.lightbox-prev {
-  left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
+.comp-text-content h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: var(--texto);
 }
 
-.lightbox-next {
-  right: 14px;
-  top: 50%;
-  transform: translateY(-50%);
+.comp-text-content p {
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  line-height: 1.5;
 }
+
+/* Lightbox Avanzado Rediseñado */
+.lightbox {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 1000; transition: opacity 0.3s ease;
+}
+.lightbox.hidden { display: none; }
+
+.lightbox-content-wrapper {
+  display: flex;
+  max-width: 90vw;
+  max-height: 85vh;
+  background: var(--fondo-card);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-img-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  min-width: 300px;
+}
+
+.lightbox-img-container img {
+  max-width: 100%;
+  max-height: 85vh;
+  display: block;
+  object-fit: contain;
+}
+
+/* Panel lateral para texto en Lightbox */
+.lightbox-sidebar {
+  width: 320px;
+  background: var(--fondo);
+  padding: 24px;
+  overflow-y: auto;
+  border-left: 1px solid var(--borde-suave);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lightbox-sidebar.hidden {
+  display: none; /* Se oculta si la imagen no tiene texto (como en la galería normal) */
+}
+
+.lightbox-sidebar h3 {
+  font-size: 1.3rem;
+  color: var(--acento);
+  margin-bottom: 12px;
+}
+
+.lightbox-sidebar p {
+  font-size: 0.95rem;
+  color: var(--texto-suave);
+  line-height: 1.6;
+}
+
+/* Botones Lightbox */
+.lightbox-prev, .lightbox-next, .lightbox-close {
+  position: absolute; background: rgba(0, 0, 0, 0.5); color: #ffffff; border: none;
+  border-radius: 999px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: var(--trans); font-size: 1.4rem; z-index: 1001;
+}
+.lightbox-prev:hover, .lightbox-next:hover, .lightbox-close:hover { background: rgba(227, 179, 64, 0.6); transform: scale(1.05); }
+
+.lightbox-close { top: 20px; right: 20px; }
+.lightbox-prev { left: 20px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 20px; top: 50%; transform: translateY(-50%); }
+
+footer { margin-top: 18px; font-size: 0.75rem; color: var(--texto-suave); display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+footer span.marca { opacity: 0.8; }
 
 /* Adaptaciones responsivas */
-@media (max-width: 720px) {
-  .contenido {
-    padding: 18px 14px 20px;
-  }
-  header {
+@media (max-width: 850px) {
+  /* En móviles, la imagen y el texto se apilan verticalmente */
+  .lightbox-content-wrapper {
     flex-direction: column;
-    align-items: flex-start;
+    max-height: 90vh;
   }
-  .slider-btn.prev {
-    left: 6px;
+  .lightbox-sidebar {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--borde-suave);
+    padding: 16px;
+    max-height: 30vh;
   }
-  .slider-btn.next {
-    right: 6px;
-  }
+}
+
+@media (max-width: 600px) {
+  .contenido { padding: 18px 14px 20px; }
+  header { flex-direction: column; align-items: flex-start; }
+  .sinopsis-container { flex-direction: column; align-items: flex-start; }
+  .comparativa-item { grid-template-columns: 1fr; }
+  .comp-grid { grid-template-columns: 1fr; }
 }
