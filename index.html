@@ -4,28 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio de fotografía - Wilson Dario Botello Torres</title>
-  <!-- Hoja de estilos externa -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="marco">
     <div class="contenido">
-      <!-- Cabecera principal -->
       <header>
         <div class="titulo">
           <h1>Portafolio fotografico </h1>
-          <p>Presentación final &mdash; Primer semestre UNIMINUTO</p>
+          <p>Presentación final &mdash; UNIMINUTO</p>
         </div>
         <div class="etiqueta">
           <span class="dot"></span>
-          <!-- Nombre completo y área de estudio actualizados -->
           <span>Wilson Dario Botello Torres · Comunicación Visual</span>
         </div>
       </header>
 
-      <!-- Navegación de pestañas -->
       <nav class="tabs">
-        <!-- Pestañas de navegación renombradas para un toque más personal -->
         <button class="tab-button active" data-tab="mejores">
           <span class="icon">📷</span>
           <span>Mi galería</span>
@@ -34,161 +29,59 @@
           <span class="icon">🎞️</span>
           <span>Mi proyecto final</span>
         </button>
+        <button class="tab-button" data-tab="pelicula">
+          <span class="icon">🎬</span>
+          <span>La joven de la perla</span>
+        </button>
+        <button class="tab-button" data-tab="composicion">
+          <span class="icon">📐</span>
+          <span>Principios de la composición</span>
+        </button>
       </nav>
 
       <main>
-        <!-- Contenido de la pestaña "Mis mejores fotos" -->
         <section id="tab-mejores" class="tab-content active">
-          <!-- Sección de autor con una breve descripción -->
           <section class="autor">
             <h2>Sobre mí</h2>
-            <!-- Imagen de portada personal incluida desde la carpeta raíz -->
             <img src="wilson blanco y negro.png" class="autor-foto" alt="Retrato de Wilson Dario Botello Torres">
 			<p>
 			  Hola, soy <strong>Wilson&nbsp;Dario&nbsp;Botello&nbsp;Torres</strong>, también conocido en línea como <strong>ReDXeoL</strong>.
 			  Soy estudiante de Comunicación Visual y me interesa usar la fotografía como una forma de narrar emociones más que sólo mostrar escenas.
 			  Me atraen especialmente el blanco y negro y los juegos de luz y sombra, porque me permiten construir atmósferas silenciosas,
-			  cinematográficas y llenas de intención. Este portafolio reúne 25 fotografías realizadas durante mi primer semestre, donde exploro
+			  cinematográficas y llenas de intención. Este portafolio reúne 25 fotografías realizadas en UNIMINUTO, donde exploro
 			  paisajes urbanos, retratos y momentos espontáneos que hablan de mi forma de mirar el mundo y de cómo voy construyendo mi lenguaje visual.
 			</p>
-
           </section>
 
-          <!-- Rejilla de fotos: reemplaza los nombres con tus propios archivos en la carpeta assets/ -->
           <section class="grid-fotos">
-            <!-- Foto 01 -->
-            <div class="foto" data-index="0">
-              <img src="assets/foto01.jpg" alt="Foto 1 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">01</span>
-            </div>
-            <!-- Foto 02 -->
-            <div class="foto" data-index="1">
-              <img src="assets/foto02.jpg" alt="Foto 2 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">02</span>
-            </div>
-            <!-- Foto 03 -->
-            <div class="foto" data-index="2">
-              <img src="assets/foto03.jpg" alt="Foto 3 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">03</span>
-            </div>
-            <!-- Foto 04 -->
-            <div class="foto" data-index="3">
-              <img src="assets/foto04.jpg" alt="Foto 4 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">04</span>
-            </div>
-            <!-- Foto 05 -->
-            <div class="foto" data-index="4">
-              <img src="assets/foto05.jpg" alt="Foto 5 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">05</span>
-            </div>
-            <!-- Foto 06 -->
-            <div class="foto" data-index="5">
-              <img src="assets/foto06.jpg" alt="Foto 6 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">06</span>
-            </div>
-            <!-- Foto 07 -->
-            <div class="foto" data-index="6">
-              <img src="assets/foto07.jpg" alt="Foto 7 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">07</span>
-            </div>
-            <!-- Foto 08 -->
-            <div class="foto" data-index="7">
-              <img src="assets/foto08.jpg" alt="Foto 8 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">08</span>
-            </div>
-            <!-- Foto 09 -->
-            <div class="foto" data-index="8">
-              <img src="assets/foto09.jpg" alt="Foto 9 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">09</span>
-            </div>
-            <!-- Foto 10 -->
-            <div class="foto" data-index="9">
-              <img src="assets/foto10.jpg" alt="Foto 10 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">10</span>
-            </div>
-            <!-- Foto 11 -->
-            <div class="foto" data-index="10">
-              <img src="assets/foto11.jpg" alt="Foto 11 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">11</span>
-            </div>
-            <!-- Foto 12 -->
-            <div class="foto" data-index="11">
-              <img src="assets/foto12.jpg" alt="Foto 12 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">12</span>
-            </div>
-            <!-- Foto 13 -->
-            <div class="foto" data-index="12">
-              <img src="assets/foto13.jpg" alt="Foto 13 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">13</span>
-            </div>
-            <!-- Foto 14 -->
-            <div class="foto" data-index="13">
-              <img src="assets/foto14.jpg" alt="Foto 14 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">14</span>
-            </div>
-            <!-- Foto 15 -->
-            <div class="foto" data-index="14">
-              <img src="assets/foto15.jpg" alt="Foto 15 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">15</span>
-            </div>
-            <!-- Foto 16 -->
-            <div class="foto" data-index="15">
-              <img src="assets/foto16.jpg" alt="Foto 16 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">16</span>
-            </div>
-            <!-- Foto 17 -->
-            <div class="foto" data-index="16">
-              <img src="assets/foto17.jpg" alt="Foto 17 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">17</span>
-            </div>
-            <!-- Foto 18 -->
-            <div class="foto" data-index="17">
-              <img src="assets/foto18.jpg" alt="Foto 18 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">18</span>
-            </div>
-            <!-- Foto 19 -->
-            <div class="foto" data-index="18">
-              <img src="assets/foto19.jpg" alt="Foto 19 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">19</span>
-            </div>
-            <!-- Foto 20 -->
-            <div class="foto" data-index="19">
-              <img src="assets/foto20.jpg" alt="Foto 20 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">20</span>
-            </div>
-            <!-- Foto 21 -->
-            <div class="foto" data-index="20">
-              <img src="assets/foto21.jpg" alt="Foto 21 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">21</span>
-            </div>
-            <!-- Foto 22 -->
-            <div class="foto" data-index="21">
-              <img src="assets/foto22.jpg" alt="Foto 22 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">22</span>
-            </div>
-            <!-- Foto 23 -->
-            <div class="foto" data-index="22">
-              <img src="assets/foto23.jpg" alt="Foto 23 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">23</span>
-            </div>
-            <!-- Foto 24 -->
-            <div class="foto" data-index="23">
-              <img src="assets/foto24.jpg" alt="Foto 24 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">24</span>
-            </div>
-            <!-- Foto 25 -->
-            <div class="foto" data-index="24">
-              <img src="assets/foto25.jpg" alt="Foto 25 - portafolio Wilson Dario Botello Torres">
-              <span class="caption">25</span>
-            </div>
+            <div class="foto" data-index="0"><img src="assets/foto01.jpg" alt="Foto 1"><span class="caption">01</span></div>
+            <div class="foto" data-index="1"><img src="assets/foto02.jpg" alt="Foto 2"><span class="caption">02</span></div>
+            <div class="foto" data-index="2"><img src="assets/foto03.jpg" alt="Foto 3"><span class="caption">03</span></div>
+            <div class="foto" data-index="3"><img src="assets/foto04.jpg" alt="Foto 4"><span class="caption">04</span></div>
+            <div class="foto" data-index="4"><img src="assets/foto05.jpg" alt="Foto 5"><span class="caption">05</span></div>
+            <div class="foto" data-index="5"><img src="assets/foto06.jpg" alt="Foto 6"><span class="caption">06</span></div>
+            <div class="foto" data-index="6"><img src="assets/foto07.jpg" alt="Foto 7"><span class="caption">07</span></div>
+            <div class="foto" data-index="7"><img src="assets/foto08.jpg" alt="Foto 8"><span class="caption">08</span></div>
+            <div class="foto" data-index="8"><img src="assets/foto09.jpg" alt="Foto 9"><span class="caption">09</span></div>
+            <div class="foto" data-index="9"><img src="assets/foto10.jpg" alt="Foto 10"><span class="caption">10</span></div>
+            <div class="foto" data-index="10"><img src="assets/foto11.jpg" alt="Foto 11"><span class="caption">11</span></div>
+            <div class="foto" data-index="11"><img src="assets/foto12.jpg" alt="Foto 12"><span class="caption">12</span></div>
+            <div class="foto" data-index="12"><img src="assets/foto13.jpg" alt="Foto 13"><span class="caption">13</span></div>
+            <div class="foto" data-index="13"><img src="assets/foto14.jpg" alt="Foto 14"><span class="caption">14</span></div>
+            <div class="foto" data-index="14"><img src="assets/foto15.jpg" alt="Foto 15"><span class="caption">15</span></div>
+            <div class="foto" data-index="15"><img src="assets/foto16.jpg" alt="Foto 16"><span class="caption">16</span></div>
+            <div class="foto" data-index="16"><img src="assets/foto17.jpg" alt="Foto 17"><span class="caption">17</span></div>
+            <div class="foto" data-index="17"><img src="assets/foto18.jpg" alt="Foto 18"><span class="caption">18</span></div>
+            <div class="foto" data-index="18"><img src="assets/foto19.jpg" alt="Foto 19"><span class="caption">19</span></div>
+            <div class="foto" data-index="19"><img src="assets/foto20.jpg" alt="Foto 20"><span class="caption">20</span></div>
+            <div class="foto" data-index="20"><img src="assets/foto21.jpg" alt="Foto 21"><span class="caption">21</span></div>
+            <div class="foto" data-index="21"><img src="assets/foto22.jpg" alt="Foto 22"><span class="caption">22</span></div>
+            <div class="foto" data-index="22"><img src="assets/foto23.jpg" alt="Foto 23"><span class="caption">23</span></div>
+            <div class="foto" data-index="23"><img src="assets/foto24.jpg" alt="Foto 24"><span class="caption">24</span></div>
+            <div class="foto" data-index="24"><img src="assets/foto25.jpg" alt="Foto 25"><span class="caption">25</span></div>
           </section>
-
-          <p class="nota">
-     
-          </p>
         </section>
 
-        <!-- Contenido de la pestaña "Proyecto final" -->
         <section id="tab-proyecto" class="tab-content">
           <h2>Proyecto final</h2>
           <section class="slider">
@@ -206,26 +99,162 @@
               Título o descripción de la foto 1
             </p>
           </section>
-          <p class="nota">
-          </p>
         </section>
+
+        <section id="tab-pelicula" class="tab-content">
+          <div class="sinopsis-container">
+            <img src="assets/portada.jpg" alt="Portada La joven de la perla" class="portada-pelicula">
+            <div>
+              <h2>La joven de la perla</h2>
+              <p>Esta adaptación de la popular novela narra como una criada joven, amante en secreto del arte, se convierte en la musa del pintor neerlandés Vermeer.</p>
+            </div>
+          </div>
+
+          <div class="comparativa-grid">
+            <div class="comparativa-item">
+              <div class="foto-wrap"><img src="assets/referecia 01.png" alt="Referencia 01"><span class="caption">Referencia 01</span></div>
+              <div class="foto-wrap"><img src="assets/foto 01.png" alt="Foto 01"><span class="caption">Foto 01</span></div>
+            </div>
+            <div class="comparativa-item">
+              <div class="foto-wrap"><img src="assets/referecia 02.png" alt="Referencia 02"><span class="caption">Referencia 02</span></div>
+              <div class="foto-wrap"><img src="assets/foto 02.png" alt="Foto 02"><span class="caption">Foto 02</span></div>
+            </div>
+            <div class="comparativa-item">
+              <div class="foto-wrap"><img src="assets/referecia 03.png" alt="Referencia 03"><span class="caption">Referencia 03</span></div>
+              <div class="foto-wrap"><img src="assets/foto 03.png" alt="Foto 03"><span class="caption">Foto 03</span></div>
+            </div>
+            <div class="comparativa-item">
+              <div class="foto-wrap"><img src="assets/referecia 04.png" alt="Referencia 04"><span class="caption">Referencia 04</span></div>
+              <div class="foto-wrap"><img src="assets/foto 04.jpg" alt="Foto 04"><span class="caption">Foto 04</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="tab-composicion" class="tab-content">
+          <div class="comp-header">
+            <h2>Principios de la composición fotográfica</h2>
+            <p>Selección de imágenes que aplican los 9 conceptos fundamentales del lenguaje visual.</p>
+          </div>
+          
+          <div class="comp-grid">
+            <div class="comp-card">
+              <div class="comp-img-wrap">
+                <img src="assets/Simetría.jpg" alt="Simetría">
+              </div>
+              <div class="comp-text-content">
+                <h3>Simetría</h3>
+                <p>La imagen se divide verticalmente con un peso visual casi idéntico en ambos lados, creando un claro ejemplo de simetría central.</p>
+              </div>
+            </div>
+            
+            <div class="comp-card">
+              <div class="comp-img-wrap">
+                <img src="assets/Proporción.jpg" alt="Proporción">
+              </div>
+              <div class="comp-text-content">
+                <h3>Proporción</h3>
+                <p>El contrapicado exagera el tamaño del edificio frente al espectador, destacando de forma dramática la inmensa escala y grandeza de la estructura.</p>
+              </div>
+            </div>
+
+            <div class="comp-card">
+              <div class="comp-img-wrap">
+                <img src="assets/Puntos.jpg" alt="Puntos">
+              </div>
+              <div class="comp-text-content">
+                <h3>Puntos</h3>
+                <p>Un objeto pequeño y solitario de color distinto actúa como un fuerte "punto focal", atrayendo la mirada directamente hacia él dentro de la composición.</p>
+              </div>
+            </div>
+
+            <div class="comp-card">
+              <div class="comp-img-wrap">
+                <img src="assets/Líneas Áreas (2).jpg" alt="Líneas Áreas">
+              </div>
+              <div class="comp-text-content">
+                <h3>Líneas y Áreas</h3>
+                <p>Las líneas rectas marcadas fugan hacia el centro de la imagen, estructurando el espacio y guiando la mirada a través de la profundidad arquitectónica.</p>
+              </div>
+            </div>
+
+            <div class="comp-card">
+              <div class="comp-img-wrap">
+                <img src="assets/Color (contrastes).jpg" alt="Color (contrastes)">
+              </div>
+              <div class="comp-text-content">
+                <h3>Color (contrastes)</h3>
+                <p>Los colores sólidos y vivos "chocan" visualmente, logrando que los elementos resalten intensamente frente al entorno más neutro de la escena.</p>
+              </div>
+            </div>
+
+            <div class="comp-card">
+              <div class="comp-img-wrap">
+                <img src="assets/tonalidad.jpg" alt="Tonalidad">
+              </div>
+              <div class="comp-text-content">
+                <h3>Tonalidad</h3>
+                <p>Muestra una rica variedad en la escala de luz y sombra: desde blancos brillantes, pasando por grises medios, hasta sombras casi negras bajo las escaleras.</p>
+              </div>
+            </div>
+
+            <div class="comp-card">
+              <div class="comp-img-wrap">
+                <img src="assets/textura.jpg" alt="Textura">
+              </div>
+              <div class="comp-text-content">
+                <h3>Textura</h3>
+                <p>La iluminación y el acercamiento revelan el relieve, las venas y la rugosidad de la hoja, logrando transmitir la sensación táctil de la superficie.</p>
+              </div>
+            </div>
+
+            <div class="comp-card">
+              <div class="comp-img-wrap">
+                <img src="assets/Ritmo.jpg" alt="Ritmo">
+              </div>
+              <div class="comp-text-content">
+                <h3>Ritmo</h3>
+                <p>La repetición constante y sucesiva de los lomos de los libros crea un patrón visual y un ritmo ininterrumpido a lo largo de la estantería.</p>
+              </div>
+            </div>
+
+            <div class="comp-card">
+              <div class="comp-img-wrap">
+                <img src="assets/Dirección.jpg" alt="Dirección">
+              </div>
+              <div class="comp-text-content">
+                <h3>Dirección</h3>
+                <p>Las líneas del camino en forma de "S" dirigen obligatoriamente el ojo desde abajo hacia arriba, acompañando la trayectoria por la que camina la persona.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
       </main>
 
       <footer>
-        <span class="marca">Fotografía primer semestre UNIMINUTO · Wilson Dario Botello Torres (ReDXeoL)</span>
+        <span class="marca">Fotografía UNIMINUTO · Wilson Dario Botello Torres (ReDXeoL)</span>
       </footer>
     </div>
   </div>
 
-  <!-- Lightbox para ampliar fotos -->
   <div id="lightbox" class="lightbox hidden">
     <button class="lightbox-close" aria-label="Cerrar">&times;</button>
     <button class="lightbox-prev" aria-label="Anterior">&#10094;</button>
-    <img id="lightbox-img" src="" alt="Imagen ampliada">
+    
+    <div class="lightbox-content-wrapper">
+      <div class="lightbox-img-container">
+        <img id="lightbox-img" src="" alt="Imagen ampliada">
+      </div>
+      <div id="lightbox-sidebar" class="lightbox-sidebar hidden">
+        <h3 id="lightbox-title">Título</h3>
+        <p id="lightbox-desc">Descripción de la imagen...</p>
+      </div>
+    </div>
+
     <button class="lightbox-next" aria-label="Siguiente">&#10095;</button>
   </div>
 
-  <!-- Script para pestañas, slider y lightbox -->
   <script>
     // ---------- Lógica de pestañas ----------
     const tabButtons = document.querySelectorAll('.tab-button');
@@ -237,50 +266,20 @@
         tabContents.forEach((c) => c.classList.remove('active'));
         btn.classList.add('active');
         const tabName = btn.dataset.tab;
-        if (tabName === 'mejores') {
-          document.getElementById('tab-mejores').classList.add('active');
-        } else if (tabName === 'proyecto') {
-          document.getElementById('tab-proyecto').classList.add('active');
-        }
+        document.getElementById('tab-' + tabName).classList.add('active');
       });
     });
 
     // ---------- Slider del proyecto final ----------
-    // Lista de imágenes para el banner del proyecto final.
-    // Puedes renombrar los archivos y las descripciones según tus propias fotos.
     const proyectoImages = [
-      {
-        src: 'assets/proyecto01.jpg',
-        caption: 'Foto 1 · Inicio de la serie vertical.'
-      },
-      {
-        src: 'assets/proyecto02.jpg',
-        caption: 'Foto 2 · Continuación visual del proyecto.'
-      },
-      {
-        src: 'assets/proyecto03.jpg',
-        caption: 'Foto 3 · Juego de luz y composición.'
-      },
-      {
-        src: 'assets/proyecto04.jpg',
-        caption: 'Foto 4 · Puntos de tensión narrativa.'
-      },
-      {
-        src: 'assets/proyecto05.jpg',
-        caption: 'Foto 5 · Transición dentro de la serie.'
-      },
-      {
-        src: 'assets/proyecto06.jpg',
-        caption: 'Foto 6 · Refuerzo del concepto visual.'
-      },
-      {
-        src: 'assets/proyecto07.jpg',
-        caption: 'Foto 7 · Preparación para el cierre.'
-      },
-      {
-        src: 'assets/proyecto08.jpg',
-        caption: 'Foto 8 · Cierre o clímax del proyecto.'
-      }
+      { src: 'assets/proyecto01.jpg', caption: 'Foto 1 · Inicio de la serie vertical.' },
+      { src: 'assets/proyecto02.jpg', caption: 'Foto 2 · Continuación visual del proyecto.' },
+      { src: 'assets/proyecto03.jpg', caption: 'Foto 3 · Juego de luz y composición.' },
+      { src: 'assets/proyecto04.jpg', caption: 'Foto 4 · Puntos de tensión narrativa.' },
+      { src: 'assets/proyecto05.jpg', caption: 'Foto 5 · Transición dentro de la serie.' },
+      { src: 'assets/proyecto06.jpg', caption: 'Foto 6 · Refuerzo del concepto visual.' },
+      { src: 'assets/proyecto07.jpg', caption: 'Foto 7 · Preparación para el cierre.' },
+      { src: 'assets/proyecto08.jpg', caption: 'Foto 8 · Cierre o clímax del proyecto.' }
     ];
 
     const sliderImage = document.getElementById('slider-image');
@@ -288,7 +287,6 @@
     const indicatorsContainer = document.getElementById('slider-indicators');
     const prevBtnSlider = document.querySelector('.slider-btn.prev');
     const nextBtnSlider = document.querySelector('.slider-btn.next');
-
     let sliderCurrentIndex = 0;
 
     function crearIndicadores() {
@@ -296,100 +294,104 @@
       proyectoImages.forEach((item, index) => {
         const dot = document.createElement('button');
         dot.className = 'slider-indicator';
-        dot.setAttribute('aria-label', 'Ir a la imagen ' + (index + 1));
         dot.addEventListener('click', () => mostrarImagen(index));
         indicatorsContainer.appendChild(dot);
       });
     }
 
     function mostrarImagen(index) {
-      if (index < 0) {
-        index = proyectoImages.length - 1;
-      } else if (index >= proyectoImages.length) {
-        index = 0;
-      }
+      if (index < 0) index = proyectoImages.length - 1;
+      else if (index >= proyectoImages.length) index = 0;
       sliderCurrentIndex = index;
       const item = proyectoImages[sliderCurrentIndex];
       sliderImage.style.opacity = 0;
       setTimeout(() => {
         sliderImage.src = item.src;
-        sliderImage.alt = item.caption;
         sliderCaption.textContent = item.caption;
         sliderImage.style.opacity = 1;
       }, 200);
       const dots = document.querySelectorAll('.slider-indicator');
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === sliderCurrentIndex);
-      });
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === sliderCurrentIndex));
     }
 
-    prevBtnSlider.addEventListener('click', () => {
-      mostrarImagen(sliderCurrentIndex - 1);
-    });
-    nextBtnSlider.addEventListener('click', () => {
-      mostrarImagen(sliderCurrentIndex + 1);
-    });
+    prevBtnSlider.addEventListener('click', () => mostrarImagen(sliderCurrentIndex - 1));
+    nextBtnSlider.addEventListener('click', () => mostrarImagen(sliderCurrentIndex + 1));
     crearIndicadores();
     mostrarImagen(0);
 
-    // ---------- Lightbox reutilizable para la galería y el proyecto ----------
-    const fotos = document.querySelectorAll('.grid-fotos .foto');
+    // ---------- Lightbox Avanzado ----------
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxSidebar = document.getElementById('lightbox-sidebar');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxDesc = document.getElementById('lightbox-desc');
     const prevBtnLightbox = document.querySelector('.lightbox-prev');
     const nextBtnLightbox = document.querySelector('.lightbox-next');
     const closeBtnLightbox = document.querySelector('.lightbox-close');
 
-    // Arreglos con las rutas de las imágenes de la galería y del proyecto
-    const rutasFotos = Array.from(fotos).map(f => f.querySelector('img').getAttribute('src'));
-    const rutasProyecto = proyectoImages.map(item => item.src);
+    // Nodos de imágenes
+    const fotosGaleria = document.querySelectorAll('.grid-fotos .foto img');
+    const fotosPelicula = document.querySelectorAll('#tab-pelicula .foto-wrap img');
+    const fotosComp = document.querySelectorAll('.comp-card'); 
 
-    // Esta variable se actualizará con el arreglo correspondiente cuando se abra el lightbox
-    let currentImages = rutasFotos;
+    // Extracción de datos
+    const dataGaleria = Array.from(fotosGaleria).map(img => ({ src: img.src, title: '', desc: '' }));
+    const dataProyecto = proyectoImages.map(item => ({ src: item.src, title: item.caption, desc: '' }));
+    const dataPelicula = Array.from(fotosPelicula).map(img => ({ src: img.src, title: img.alt, desc: '' }));
+    
+    // Para la pestaña composición sacamos la imagen, el título y el párrafo
+    const dataComp = Array.from(fotosComp).map(card => {
+      return {
+        src: card.querySelector('img').src,
+        title: card.querySelector('h3').textContent,
+        desc: card.querySelector('p').textContent
+      };
+    });
+
+    let currentImages = [];
     let fotoActual = 0;
 
-    function abrirLightboxGaleria(index) {
-      currentImages = rutasFotos;
+    function abrirLightbox(dataset, index) {
+      currentImages = dataset;
       fotoActual = index;
-      lightboxImg.src = currentImages[fotoActual];
-      lightbox.classList.remove('hidden');
-    }
-    // Función para abrir el lightbox desde el slider del proyecto
-    function abrirLightboxProyecto(index) {
-      currentImages = rutasProyecto;
-      fotoActual = index;
-      lightboxImg.src = currentImages[fotoActual];
-      lightbox.classList.remove('hidden');
-    }
-    function cerrarLightbox() {
-      lightbox.classList.add('hidden');
-    }
-    function mostrarAnterior() {
-      fotoActual = (fotoActual - 1 + currentImages.length) % currentImages.length;
-      lightboxImg.src = currentImages[fotoActual];
-    }
-    function mostrarSiguiente() {
-      fotoActual = (fotoActual + 1) % currentImages.length;
-      lightboxImg.src = currentImages[fotoActual];
+      actualizarImagenLightbox();
     }
 
-    // Abrir lightbox para cada imagen de la galería
-    fotos.forEach((foto, index) => {
-      foto.addEventListener('click', () => {
-        abrirLightboxGaleria(index);
-      });
+    function actualizarImagenLightbox() {
+      const item = currentImages[fotoActual];
+      lightboxImg.src = item.src;
+      
+      // Si hay descripción (como en Composición), mostramos la barra lateral
+      if (item.desc !== '') {
+        lightboxSidebar.classList.remove('hidden');
+        lightboxTitle.textContent = item.title;
+        lightboxDesc.textContent = item.desc;
+      } else {
+        lightboxSidebar.classList.add('hidden');
+      }
+      
+      lightbox.classList.remove('hidden');
+    }
+
+    function cerrarLightbox() { lightbox.classList.add('hidden'); }
+    function mostrarAnterior() { fotoActual = (fotoActual - 1 + currentImages.length) % currentImages.length; actualizarImagenLightbox(); }
+    function mostrarSiguiente() { fotoActual = (fotoActual + 1) % currentImages.length; actualizarImagenLightbox(); }
+
+    // Eventos Click
+    fotosGaleria.forEach((img, index) => img.addEventListener('click', () => abrirLightbox(dataGaleria, index)));
+    sliderImage.addEventListener('click', () => abrirLightbox(dataProyecto, sliderCurrentIndex));
+    fotosPelicula.forEach((img, index) => img.addEventListener('click', () => abrirLightbox(dataPelicula, index)));
+    
+    // Eventos Click para Composición (el usuario puede hacer click en la foto o en la tarjeta)
+    fotosComp.forEach((card, index) => {
+      card.querySelector('img').addEventListener('click', () => abrirLightbox(dataComp, index));
     });
-    // Abrir lightbox para el slider al hacer clic en la imagen mostrada
-    sliderImage.addEventListener('click', () => {
-      abrirLightboxProyecto(sliderCurrentIndex);
-    });
-    // Navegación dentro del lightbox
+
     prevBtnLightbox.addEventListener('click', mostrarAnterior);
     nextBtnLightbox.addEventListener('click', mostrarSiguiente);
     closeBtnLightbox.addEventListener('click', cerrarLightbox);
-    // Permite cerrar haciendo clic fuera de la imagen
     lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) cerrarLightbox();
+      if (e.target === lightbox || e.target.classList.contains('lightbox-content-wrapper') || e.target.classList.contains('lightbox-img-container')) cerrarLightbox();
     });
   </script>
 </body>
